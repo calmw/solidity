@@ -25,7 +25,7 @@ function transfer_from(
     address to, // 资金转入方 handler
     uint256 amount  // 转账资金金额
 ) public virtual override returns (bool) {
-    // 这里的msgSender赋值给spender，是因为该方法是有spender来调用的，然后把owner的代币转给to账户
+    // 这里的msgSender赋值给spender，是因为该方法是有spender来调用的，然后把owner（也就是这里的参数from）的代币转给to账户
     address spender = _msgSender();
     _spendAllowance(from, spender, amount);
     _transfer(from, to, amount);
