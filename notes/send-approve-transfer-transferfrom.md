@@ -1,3 +1,7 @@
+#### send
+
+- send用于转账原生币，transfer、transfer_from用于转代币
+
 #### approve、transfer、transfer_from(加下划线是为了消除编辑器提示拼写错误)
 
 - approve、transfer、transfer_from这几个方法都是ERC标准中的方法，也就是说，代币（ERC20、ERC721、ERC1155）必须要实现这几个方法
