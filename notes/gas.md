@@ -1,5 +1,13 @@
 #### 介绍
-- 
+
+- 以太坊gas用来控制交易对资源的使用
+- gas是到交易结束后才会扣除
+
+#### gas费预估和计算
+
+- 可以通过gasEstimate预估某个调用所需的gas开销
+- 可以通过getGasPrice来gas price,
+- gasLimit是固定值21000乘以浮动的gasPrice就是gas
 
 #### gas耗尽
 
