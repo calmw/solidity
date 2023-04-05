@@ -25,7 +25,7 @@ function transfer(address to, uint256 amount) public virtual override returns (b
 }
 
 function transfer_from(
-    address from, // 资金转出方 msg.sender
+    address from, // 资金转出方，不是msg.sender，此时msg.sender是作为调用者的spender
     address to, // 资金转入方 handler
     uint256 amount  // 转账资金金额
 ) public virtual override returns (bool) {
