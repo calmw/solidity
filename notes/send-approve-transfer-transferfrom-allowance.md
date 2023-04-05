@@ -30,9 +30,15 @@ function transfer_from(
     uint256 amount  // 转账资金金额
 ) public virtual override returns (bool) {
     // 这里的msgSender赋值给spender，是因为该方法是有spender来调用的，然后把owner（也就是这里的参数from）的代币转给to账户
+    // 同理执行allowance查询时候,owner是给spender配额的owner
     address spender = _msgSender();
     _spendAllowance(from, spender, amount);
     _transfer(from, to, amount);
     return true;
+}
+
+// owner是给spender配额的owner，spender是调用allowance的账户
+function allowance(address owner, address spender) public view virtual override returns (uint256) {
+    return _allowances[owner][spender];
 }
 ```
