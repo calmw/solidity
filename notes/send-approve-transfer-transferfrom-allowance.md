@@ -5,7 +5,8 @@
 #### approve、transfer、transfer_from(加下划线是为了消除编辑器提示拼写错误)
 
 - approve、transfer、transfer_from这几个方法都是ERC标准中的方法，也就是说，代币（ERC20、ERC721、ERC1155）必须要实现这几个方法
-- approve的额度（owner给spender分配的额度）是可以随便给的，但是转账时候会检查余额（spender在调用transfer_from转账时候会检查from的余额，此时from对应前面的owner）
+- approve的额度（owner给spender分配的额度）是可以随便给的，但是转账时候会检查余额（spender在调用transfer_from转账时候会检查from也就是approve那一步owner的余额）
+- approve和transfer_from这两个是配合使用的
 
 #### transfer和transfer_from的相同点和区别
 
