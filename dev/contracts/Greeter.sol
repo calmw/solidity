@@ -30,8 +30,7 @@ contract MappingIterator {
 
     function delElement(string calldata key) public {
         for (uint i; i < keys.length; i++) {
-            string memory ki = keys[i];
-            if (keccak256(abi.encodePacked(key)) == keccak256(abi.encodePacked(ki))) {
+            if (keccak256(abi.encodePacked(key)) == keccak256(abi.encodePacked(keys[i]))) {
                 delete elements[key];
                 delete keys[i];
                 return;
