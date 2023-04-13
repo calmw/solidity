@@ -1,22 +1,21 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
-import "hardhat/console.sol";
+contract MappingIterator {
+    mapping(string => address)elements;
+    string[] keys;
 
-contract Greeter {
-    string private greeting;
-
-    constructor(string memory _greeting) {
-        console.log("Deploying a Greeter with greeting:", _greeting);
-        greeting = _greeting;
+    // 给map添加键值对（key不存在添加键值对，存在更新值）
+    function put(string key, address addr)returns (bool)  {
+        bool exists = elements[key] != address(0);
+        if (!exists) {//不存在
+            keys.push(key);
+        }
+        elements[key] = addr;
+        return true;
     }
 
-    function greet() public view returns (string memory) {
-        return greeting;
-    }
-
-    function setGreeting(string memory _greeting) public {
-        console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
-        greeting = _greeting;
+    function getKeyCount() constant returns (uint) {
+        return keys.length;
     }
 }
