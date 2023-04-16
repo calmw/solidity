@@ -10,8 +10,6 @@
     - LogicTwo.at(Registry.address).setVal(2)
 - 上述指令通过ABI操作，LogicOne和LogicTwo其实都在操作Registry的Storage域（包括其中的Val），但是操作逻辑（这里是setVal）定义在各自的合约里。
 
-LogicOne:   0xaF80c6ac5b188Fc9256f121fDdC5BaB1d65ed4E9
-
-Registry:   0x9EFf24D55c9dB238d8999ADEf25db81beEA441EF
-
+LogicOne:   0xaF80c6ac5b188Fc9256f121fDdC5BaB1d65ed4E9  
+Registry:   0x9EFf24D55c9dB238d8999ADEf25db81beEA441EF  
 LogicTwo:   0xeb9a4B62645aCF19ad2Fc9C26451d67e00EA7De3
