@@ -22,3 +22,4 @@
     cd $GOPATH/src/github.com/ethereum/go-ethereum/
     make
     make devtools
+    abigen --abi XXX.abi --pkg XXX --out XXX.go
