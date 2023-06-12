@@ -36,4 +36,9 @@ Using Ganache CLI
     - 使用--account时，不会为您创建HD钱包。
     - -u or --unlock: 指定 - unlock...多次传递地址或帐户索引以解锁特定帐户。当与 -- secure一起使用时，--unlock将覆盖指定帐户的锁定状态。
 
+#### 解决没有events
+
+- 关联truffle项目，将配置文件在Ganache配置好，重启后就可以了
+- 
+
 
