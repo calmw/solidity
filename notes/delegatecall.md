@@ -5,3 +5,4 @@
 
 #### 小结
 - ![delegatecall.jpg](..%2Fstatic%2Fdelegatecall.jpg)
+- ![call_delegatecall_staticcall.jpg](..%2Fstatic%2Fcall_delegatecall_staticcall.jpg)
