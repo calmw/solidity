@@ -85,13 +85,9 @@ contract LiquidityToken {
     
         }
     
-        receive() external payable {
+        receive() external payable {}
     
-        }
-    
-        falback() external payable {
-    
-        }
+        falback() external payable {}
     
         // functions are first grouped by
         // - external

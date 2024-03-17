@@ -1,6 +1,6 @@
 #### send
 
-- send用于转账原生币，transfer、transferfrom用于转代币
+- send、transfer、all用于转账原生币，transfer、transferfrom用于转代币
 
 #### approve、transfer、transferfrom
 
